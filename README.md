@@ -32,23 +32,6 @@ this project implements two neural network architectures for image classificatio
 
 note: results may vary slightly between runs due to random initialization and data splits.
 
-## project structure
-├── assignment_01_code.ipynb # main notebook with all code
-├── assignment 1 report-1.pdf # detailed analysis and discussion
-├── requirements.txt # dependencies
-└── README.md # this file
-
-
-## requirements
-- python 3.8+
-- pytorch
-- torchvision
-- numpy
-- matplotlib
-- scikit-learn
-- tqdm
-- medmnist
-
 
 ## model architectures
 ### mlp for fashionmnist
@@ -71,3 +54,48 @@ note: results may vary slightly between runs due to random initialization and da
 | 5 | conv2d | 120 | 5x5 | relu |
 | 6 | linear | 84 | - | relu |
 | 7 | linear | 2 | - | - |
+
+## reproducibility
+to get consistent results, set random seeds:
+
+import torch
+import numpy as np
+import random
+
+def set_seed(seed=42):
+    torch.manual_seed(seed)
+    torch.cuda.manual_seed_all(seed)
+    np.random.seed(seed)
+    random.seed(seed)
+    torch.backends.cudnn.deterministic = True
+    
+## project structure
+├── assignment_01_code.ipynb # main notebook with all code
+├── assignment 1 report-1.pdf # detailed analysis and discussion
+├── requirements.txt # dependencies
+└── README.md # this file
+
+
+## requirements
+- python 3.8+
+- pytorch
+- torchvision
+- numpy
+- matplotlib
+- scikit-learn
+- tqdm
+- medmnist
+
+## usage
+jupyter notebook Assignment_01_code.ipynb 
+
+## installation
+```bash
+git clone https://github.com/kritika-w/fashion-breast-mnist-classification.git
+cd fashion-breast-mnist-classification
+pip install -r requirements.txt
+
+
+
+
+
