@@ -70,10 +70,10 @@ def set_seed(seed=42):
     torch.backends.cudnn.deterministic = True
     
 ## project structure
-├── assignment_01_code.ipynb # main notebook with all code
-├── assignment 1 report-1.pdf # detailed analysis and discussion
-├── requirements.txt # dependencies
-└── README.md # this file
+├── assignment_01_code.ipynb      # main notebook with all code
+├── assignment 1 report-1.pdf      # detailed analysis and discussion
+├── requirements.txt                # dependencies
+└── README.md                       # this file
 
 
 ## requirements
