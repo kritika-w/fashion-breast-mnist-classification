@@ -33,3 +33,41 @@ this project implements two neural network architectures for image classificatio
 note: results may vary slightly between runs due to random initialization and data splits.
 
 ## project structure
+├── assignment_01_code.ipynb # main notebook with all code
+├── assignment 1 report-1.pdf # detailed analysis and discussion
+├── requirements.txt # dependencies
+└── README.md # this file
+
+
+## requirements
+- python 3.8+
+- pytorch
+- torchvision
+- numpy
+- matplotlib
+- scikit-learn
+- tqdm
+- medmnist
+
+
+## model architectures
+### mlp for fashionmnist
+| layer | type | input | output | activation |
+|-------|------|-------|--------|------------|
+| 1 | linear | 28x28 | 256 | relu |
+| 2 | linear | 256 | 128 | relu |
+| 3 | dropout | 128 | 128 | - |
+| 4 | linear | 128 | 64 | relu |
+| 5 | dropout | 64 | 64 | - |
+| 6 | linear | 64 | 10 | - |
+
+### lenet for breastmnist
+| layer | type | out channels | kernel | activation |
+|-------|------|--------------|--------|------------|
+| 1 | conv2d | 6 | 5x5 | relu |
+| 2 | maxpool | 6 | 2x2 | - |
+| 3 | conv2d | 16 | 5x5 | relu |
+| 4 | maxpool | 16 | 2x2 | - |
+| 5 | conv2d | 120 | 5x5 | relu |
+| 6 | linear | 84 | - | relu |
+| 7 | linear | 2 | - | - |
